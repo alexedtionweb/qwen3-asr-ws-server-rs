@@ -1,0 +1,16 @@
+[package]
+name = "asr-rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+qwen3-asr = { version = "0.2.2", default-features = false, features = ["hub", "cuda"] }
+candle-core = { version = "0.9.2", features = ["cuda"] }
+tokio = { version = "1", features = ["full"] }
+uuid = { version = "1", features = ["v4"] }
+serde_json = "1"
+anyhow = "1"
+axum = { version = "0.8", features = ["ws"] }
+base64 = "0.22"
+futures-util = "0.3"
+env_logger = "0.11"
